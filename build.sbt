@@ -55,7 +55,7 @@ lazy val commonSettings: Seq[Setting[_]] = Seq(
   publishArtifact in Test := false
 ) ++ Seq(Compile, Test).flatMap(c => scalacOptions in (c, console) --= unusedWarnings)
 
-val circeVersion = "0.10.1"
+val circeVersion = "0.11.1"
 lazy val root = (project in file("."))
   .settings(commonSettings)
   .settings(
